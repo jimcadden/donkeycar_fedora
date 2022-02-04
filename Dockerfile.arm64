@@ -1,0 +1,13 @@
+FROM registry.fedoraproject.org/fedora:35 as baseimg
+USER 0
+WORKDIR /
+
+RUN yum install -y git vim 
+RUN chmod 777 /tmp
+
+ADD donkeycar.arm64.sh /tmp
+RUN bash /tmp/donkeycar.arm64.sh
+
+ADD mycar.arm64.sh /tmp
+RUN bash /tmp/mycar.arm64.sh
+
