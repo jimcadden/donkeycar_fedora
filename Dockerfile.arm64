@@ -5,6 +5,8 @@ WORKDIR /
 RUN yum install -y git vim 
 RUN chmod 777 /tmp
 
+ADD donkeycar /root/donkeycar
+
 ADD donkeycar.arm64.sh /tmp
 RUN bash /tmp/donkeycar.arm64.sh
 
