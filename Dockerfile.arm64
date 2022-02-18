@@ -13,3 +13,6 @@ RUN bash /tmp/donkeycar.arm64.sh
 ADD mycar.arm64.sh /tmp
 RUN bash /tmp/mycar.arm64.sh
 
+# For RPI Only
+ADD pi-userland.sh /tmp
+RUN bash /tmp/pi-userland.sh
